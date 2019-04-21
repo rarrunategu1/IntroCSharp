@@ -112,10 +112,44 @@ namespace IntroCSharp
             numbers.Clear();
 
             Console.WriteLine("Count: " + numbers.Count);
-
-
         }
 
+        public static void facebookLikes()
+        {
+            List<string>facebookFriends = new List<string>();
+                   
+            while (true)
+            {
+                Console.WriteLine("Please enter a name to store in your friends list and press enter.  Press enter without entering a name to escape: ");
+                string userInput = Console.ReadLine();
+                
+                if (userInput != "")
+                {
+                    facebookFriends.Add(userInput);
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            switch(facebookFriends.Count)
+            {
+                case 0:
+                    Console.WriteLine("");
+                    break;
+                case 1:
+                    Console.WriteLine(facebookFriends[0] + " likes your post.");
+                    break;
+                case 2:
+                    Console.WriteLine(facebookFriends[0] + " and " + facebookFriends[1] + " like your post.");
+                    break;
+                default:
+                    Console.WriteLine(facebookFriends[0] + ", " + facebookFriends[1] + " and " + (facebookFriends.Count - 2) + " other friends like your post.");
+                    break;
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -123,6 +157,9 @@ namespace IntroCSharp
             Console.WriteLine();
 
             lists();
+            Console.WriteLine();
+
+            facebookLikes();
             Console.WriteLine();
 
 
