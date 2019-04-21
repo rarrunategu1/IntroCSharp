@@ -116,6 +116,7 @@ namespace IntroCSharp
 
         public static void facebookLikes()
         {
+            Console.WriteLine("Facebook Likes method: ");
             List<string>facebookFriends = new List<string>();
                    
             while (true)
@@ -151,6 +152,28 @@ namespace IntroCSharp
             }
         }
 
+        public static void reversedName()
+        {
+            Console.WriteLine("reversedName Method: ");
+            Console.WriteLine("Please enter your name so that I can reverse it for you: ");
+            string userInput = Console.ReadLine();
+
+            char [] userName = new char[userInput.Length];
+
+            for (int i = 0; i < userInput.Length; i++)
+            {
+                userName[i] = userInput[i];
+            }
+            
+            Array.Reverse(userName);
+
+            Console.WriteLine("Your name in reverse is ");
+            foreach (char letter in userName)
+            {
+                Console.Write(letter);
+            }
+        }
+
         static void Main(string[] args)
         {
             arrays();
@@ -160,6 +183,9 @@ namespace IntroCSharp
             Console.WriteLine();
 
             facebookLikes();
+            Console.WriteLine();
+
+            reversedName();
             Console.WriteLine();
 
 
