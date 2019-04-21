@@ -167,11 +167,41 @@ namespace IntroCSharp
             
             Array.Reverse(userName);
 
-            Console.WriteLine("Your name in reverse is ");
             foreach (char letter in userName)
             {
                 Console.Write(letter);
             }
+        }
+
+        public static void uniqueNumber()
+        {
+            List<long> uniqueNumbers = new List<long>();
+
+            while (uniqueNumbers.Count != 5)
+            {
+                Console.WriteLine("Please enter a number and press enter.  You'll need to enter 5 in total: ");
+                long userInput = Convert.ToInt64(Console.ReadLine());
+
+                if (uniqueNumbers.Contains(userInput))
+                {
+                    Console.WriteLine("Retry with a unique number. ");
+                    continue;
+                }
+                else if (!uniqueNumbers.Contains(userInput))
+                {
+                    uniqueNumbers.Add(userInput);
+                    continue;
+                }
+            }
+            uniqueNumbers.Sort();
+            Console.WriteLine();
+            foreach (var number in uniqueNumbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            
+
         }
 
         static void Main(string[] args)
@@ -186,6 +216,9 @@ namespace IntroCSharp
             Console.WriteLine();
 
             reversedName();
+            Console.WriteLine();
+
+            uniqueNumber();
             Console.WriteLine();
 
 
