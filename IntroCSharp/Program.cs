@@ -292,6 +292,7 @@ namespace IntroCSharp
             DateAndTime dt = new DateAndTime();
             dt.dateTime();
             Console.WriteLine();
+            dt.timeSpanner();
 
 
             Console.ReadLine();

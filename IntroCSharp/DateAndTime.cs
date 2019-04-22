@@ -24,6 +24,40 @@ namespace IntroCSharp
             Console.WriteLine(now.ToString());
             Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
         }
+
+        public void timeSpanner()
+        {
+            //Creating TimeSpan Objects
+            var timeSpan = new TimeSpan(1, 2, 3);
+            var timeSpan2 = TimeSpan.FromHours(1);
+
+            var start = DateTime.Now;
+            var end = DateTime.Now.AddMinutes(2);
+
+            var duration = end - start;
+
+            Console.WriteLine("Duration: " +duration);
+
+            //Properties Object
+            Console.WriteLine("Minutes: " + timeSpan.Minutes);
+            //Converts entire time to minutes
+            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+
+            //timeSpan is immutable but you can modify with add or subtract
+            //ADD
+            //adding 8 minutes to original timespan
+            Console.WriteLine("Add example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+
+            //SUBTRACT
+            //subtracting 3 minutes from original timespan
+            Console.WriteLine("Subtract example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+
+            //CONVERSION TO STRING 
+            Console.WriteLine("ToString: " + timeSpan.ToString());
+
+            //CONVERSION FROM STRING TO TIMESPAN OBJECT
+            Console.WriteLine("Parse: "+ TimeSpan.Parse("01:02:03"));
+        }
     }
 
 }
