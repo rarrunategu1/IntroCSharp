@@ -225,30 +225,66 @@ namespace IntroCSharp
                     userNumbers.Add(userNumber);
 
                 }
-                
-                
             }
-           
+        }
+
+        public static void threeSmallestNumbers()
+        {
+            while(true)
+            {
+                Console.WriteLine("Please supply a list of 5 comma seperated numbers (e.g 5,1,9,2,10): ");
+                string input = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Invalid list, please try again. ");
+                    continue;
+                }
+
+                int[] inputNumbers = input.Split(',').Select(Int32.Parse).ToArray();
+            
+                if (inputNumbers.Length == 5)
+                {
+                    Array.Sort(inputNumbers);
+                    Console.WriteLine();
+                    Console.WriteLine("Your three lowest numbers are: ");
+                    for (int i = 0; i < inputNumbers.Length - 2; i++)
+                    {
+                        Console.WriteLine(inputNumbers[i]);
+                    }
+                    break;
+                }
+                else if (inputNumbers.Length < 5 || inputNumbers.Length == 0)
+                {
+                    Console.WriteLine("Invalid list.  Please try again. ");
+                    continue;
+                }
+            }
+            
+
         }
 
         static void Main(string[] args)
         {
-            arrays();
-            Console.WriteLine();
+            //arrays();
+            //Console.WriteLine();
 
-            lists();
-            Console.WriteLine();
+            //lists();
+            //Console.WriteLine();
 
-            facebookLikes();
-            Console.WriteLine();
+            //facebookLikes();
+            //Console.WriteLine();
 
-            reversedName();
-            Console.WriteLine();
+            //reversedName();
+            //Console.WriteLine();
 
-            uniqueNumber();
-            Console.WriteLine();
+            //uniqueNumber();
+            //Console.WriteLine();
 
-            numberEntry();
+            //numberEntry();
+            //Console.WriteLine();
+
+            threeSmallestNumbers();
             Console.WriteLine();
 
 
