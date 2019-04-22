@@ -199,9 +199,36 @@ namespace IntroCSharp
             {
                 Console.WriteLine(number);
             }
+        }
 
-            
+        public static void numberEntry()
+        {
+            List<int> userNumbers = new List<int>();
 
+            while(true)
+            {
+                Console.WriteLine("Please enter a number or type quit to exit. ");
+                string userInput = Console.ReadLine();
+                if (userInput == "quit")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("If you entered any numbers they are listed below: ");
+                    foreach (int num in userNumbers)
+                    {
+                        Console.WriteLine(num);
+                    }
+                    break;
+                }
+                else if (userInput != "quit")
+                {
+                    int userNumber = Convert.ToInt32(userInput);
+                    userNumbers.Add(userNumber);
+
+                }
+                
+                
+            }
+           
         }
 
         static void Main(string[] args)
@@ -219,6 +246,9 @@ namespace IntroCSharp
             Console.WriteLine();
 
             uniqueNumber();
+            Console.WriteLine();
+
+            numberEntry();
             Console.WriteLine();
 
 
