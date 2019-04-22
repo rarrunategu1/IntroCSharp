@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace IntroCSharp
 {   
     class Program
@@ -284,8 +286,15 @@ namespace IntroCSharp
             //numberEntry();
             //Console.WriteLine();
 
-            threeSmallestNumbers();
+            //threeSmallestNumbers();
+            //Console.WriteLine();
+
+            DateAndTime dt = new DateAndTime();
+            dt.dateTime();
             Console.WriteLine();
+
+
+            Console.ReadLine();
 
 
             
