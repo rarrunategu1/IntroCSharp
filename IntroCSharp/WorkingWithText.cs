@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace IntroCSharp
 {
@@ -47,10 +48,37 @@ namespace IntroCSharp
             //"C0 will round it to 2 dollars
             string currency = price.ToString("C");
             Console.WriteLine(currency);
+        }
 
+        public string summarizingText(string text, int maxLength = 20)
+        {
+            if (text.Length < maxLength)
+            {
+               
+                return text;
+            }
+            else
+            {
+                //count the number of words that roughly fit 20 characters
+                string[] words = text.Split(' ');
+                int totalChars = 0;
+                List<string> summaryWords = new List<string>();
 
+                foreach (string word in words)
+                {
+                    summaryWords.Add(word);    
 
+                    totalChars += word.Length + 1;
+                    if (totalChars > maxLength)
+                    {
+                        break;
+                    }
+                }
 
+                string summary = String.Join(" ", summaryWords) + "...";
+                
+                return summary;
+            }
         }
     }
 }
