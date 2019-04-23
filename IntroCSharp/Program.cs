@@ -289,12 +289,14 @@ namespace IntroCSharp
             //threeSmallestNumbers();
             //Console.WriteLine();
 
-            DateAndTime dt = new DateAndTime();
-            dt.dateTime();
-            Console.WriteLine();
-            dt.timeSpanner();
+            //DateAndTime dt = new DateAndTime();
+            //dt.dateTime();
+            //Console.WriteLine();
+            //dt.timeSpanner();
+            //Console.WriteLine();
 
-
+            WorkingWithText text = new WorkingWithText();
+            text.stringFun();
             Console.ReadLine();
 
 
