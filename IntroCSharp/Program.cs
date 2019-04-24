@@ -295,12 +295,20 @@ namespace IntroCSharp
             //dt.timeSpanner();
             //Console.WriteLine();
 
-            WorkingWithText text = new WorkingWithText();
-            text.stringFun();
-            string sentence = "Sed adipiscing lorem lobortis fermentum dolor. Cursus sagittis nisl pellentesque nulla commodo nam at vivamus velit mauris nec faucibus diam sagittis. Suspendisse urna pellentesque. Ante lorem commodo. Vitae leo suspendisse. Tortor penatibus ac pede orci wisi. Quis neque convallis diam ac at. Aenean nec amet velit luctus feugiat. In donec viverra. Felis conubia nulla ac duis tellus sodales ac aenean.";
-            string summarize = text.summarizingText(sentence);
-            Console.WriteLine(summarize);
+            //WorkingWithText text = new WorkingWithText();
+            //text.stringFun();
+            //string sentence = "Sed adipiscing lorem lobortis fermentum dolor. Cursus sagittis nisl pellentesque nulla commodo nam at vivamus velit mauris nec faucibus diam sagittis. Suspendisse urna pellentesque. Ante lorem commodo. Vitae leo suspendisse. Tortor penatibus ac pede orci wisi. Quis neque convallis diam ac at. Aenean nec amet velit luctus feugiat. In donec viverra. Felis conubia nulla ac duis tellus sodales ac aenean.";
+            //string summarize = text.summarizingText(sentence);
+            //Console.WriteLine(summarize);
+            //Console.WriteLine();
+            
+            WorkingWithText.stringBuilder();
+            Console.WriteLine();
+            
             Console.ReadLine();
+            
+
+
 
 
             

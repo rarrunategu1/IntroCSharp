@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace IntroCSharp
 {
@@ -79,6 +80,28 @@ namespace IntroCSharp
                 
                 return summary;
             }
+        }
+
+        public static void stringBuilder()
+        {   
+            //create object of type string builder
+            var builder = new StringBuilder("Hello");
+            //repeat '-' 10 times
+            builder
+                    .Append('-', 10)
+            //goes to new line
+                    .AppendLine()
+                    .Append("Header")
+                    .AppendLine()
+                    .Append('-', 10)
+                    .Replace('-', '+')
+            //start from index zero and remove 10 chars
+                    .Remove(0, 10)
+            
+                    .Insert(5, new string('-', 10));
+            Console.WriteLine(builder);
+
+            Console.WriteLine("first char = " +builder[0]);
         }
     }
 }

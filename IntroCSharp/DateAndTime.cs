@@ -15,6 +15,9 @@ namespace IntroCSharp
 
             var tomorrow = now.AddDays(1);
             var yesterday = now.AddDays(-1);
+            var nextYear = now.AddYears(1);
+            Console.WriteLine(nextYear);
+            
 
             Console.WriteLine(now.ToLongDateString());
             Console.WriteLine(now.ToShortDateString());
