@@ -302,8 +302,11 @@ namespace IntroCSharp
             //Console.WriteLine(summarize);
             //Console.WriteLine();
             
-            WorkingWithText.stringBuilder();
-            Console.WriteLine();
+            //WorkingWithText.stringBuilder();
+            //Console.WriteLine();
+
+            string result = Exercises.consecutiveNumbersOrNot();
+            Console.WriteLine(result);
             
             Console.ReadLine();
             
