@@ -18,18 +18,53 @@ namespace IntroCSharp
             
             string areNumbersConsecutive = "";
             
-            for (int i = 0; i < numbers.Length-1; i++)
+            for (int i = 0; i < numbers.Length - 1; i++)
             {
-                if ((numbers[i+1] - numbers[i]) == 1)
+                if ((numbers[i + 1] - numbers[i]) == 1)
                 {
                     areNumbersConsecutive = "Consecutive";
                 }
-                else if ((numbers[i+1] - numbers[i]) != 1)
+                else if ((numbers[i + 1] - numbers[i]) != 1)
                 {
                     areNumbersConsecutive = "Not Consecutive";
                 }
             }
             return areNumbersConsecutive;
+        }
+
+        public static void duplicateNumbers()
+        {
+            Console.WriteLine("Please enter a few numbers seperated by a hyphen: ");
+            string input = Console.ReadLine();
+            
+            if (String.IsNullOrWhiteSpace(input))
+            {
+                return;
+            }
+                       
+            string[] numbers = input.Split('-');
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = i + 1; j < numbers.Length; j++)
+                { 
+                    if (numbers[i] == (numbers[j]))
+                    {
+                        Console.WriteLine("Duplicate");
+                        return;
+                    }
+                }
+            }
+
+
+                    
+                
+                
+            
+            
+
+
+            
         }
     }
 }
