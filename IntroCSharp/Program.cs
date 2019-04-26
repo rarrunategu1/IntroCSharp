@@ -289,11 +289,11 @@ namespace IntroCSharp
             //threeSmallestNumbers();
             //Console.WriteLine();
 
-            //DateAndTime dt = new DateAndTime();
-            //dt.dateTime();
-            //Console.WriteLine();
-            //dt.timeSpanner();
-            //Console.WriteLine();
+            DateAndTime dt = new DateAndTime();
+            dt.dateTime();
+            Console.WriteLine();
+            dt.timeSpanner();
+            Console.WriteLine();
 
             //WorkingWithText text = new WorkingWithText();
             //text.stringFun();
@@ -308,9 +308,12 @@ namespace IntroCSharp
             //string result = Exercises.consecutiveNumbersOrNot();
             //Console.WriteLine(result);
 
-            Exercises.duplicateNumbers();
+            //Exercises.duplicateNumbers();
+            //Console.WriteLine();
+
+            Exercises.timeValidity();
             Console.WriteLine();
-            
+
             Console.ReadLine();
             
 

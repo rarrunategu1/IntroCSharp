@@ -41,7 +41,7 @@ namespace IntroCSharp
             {
                 return;
             }
-                       
+                      
             string[] numbers = input.Split('-');
 
             for (int i = 0; i < numbers.Length; i++)
@@ -55,16 +55,34 @@ namespace IntroCSharp
                     }
                 }
             }
+    
+        }
+        public static void timeValidity()
+        {
+            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00): ");
+            string input = Console.ReadLine();
 
+            if (String.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Invalid Time");
+                return;
+            }
+            var hourAndTime = input.Split(':');
+            if (hourAndTime.Length != 2)
+            {
+                Console.WriteLine("Invalid Time");
+                return;
+            }
 
-                    
-                
-                
-            
-            
-
-
-            
+            if ((Convert.ToInt32(hourAndTime[0]) <= 23 && Convert.ToInt32(hourAndTime[0]) >= 0) && (Convert.ToInt32(hourAndTime[1]) <= 59 && Convert.ToInt32(hourAndTime[1]) >= 0))
+            {
+                Console.WriteLine("OK");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Time");
+            }
         }
     }
 }

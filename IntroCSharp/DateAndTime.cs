@@ -34,6 +34,8 @@ namespace IntroCSharp
             var timeSpan = new TimeSpan(1, 2, 3);
             var timeSpan2 = TimeSpan.FromHours(1);
 
+            Console.WriteLine(timeSpan2);
+
             var start = DateTime.Now;
             var end = DateTime.Now.AddMinutes(2);
 
