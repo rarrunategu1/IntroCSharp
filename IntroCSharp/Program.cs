@@ -289,11 +289,11 @@ namespace IntroCSharp
             //threeSmallestNumbers();
             //Console.WriteLine();
 
-            DateAndTime dt = new DateAndTime();
-            dt.dateTime();
-            Console.WriteLine();
-            dt.timeSpanner();
-            Console.WriteLine();
+            //DateAndTime dt = new DateAndTime();
+            //dt.dateTime();
+            //Console.WriteLine();
+            //dt.timeSpanner();
+            //Console.WriteLine();
 
             //WorkingWithText text = new WorkingWithText();
             //text.stringFun();
@@ -311,7 +311,10 @@ namespace IntroCSharp
             //Exercises.duplicateNumbers();
             //Console.WriteLine();
 
-            Exercises.timeValidity();
+            //Exercises.timeValidity();
+            //Console.WriteLine();
+
+            Exercises.pascalCase();
             Console.WriteLine();
 
             Console.ReadLine();

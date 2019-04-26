@@ -84,5 +84,24 @@ namespace IntroCSharp
                 Console.WriteLine("Invalid Time");
             }
         }
+
+        public static void pascalCase()
+        {
+            Console.WriteLine("Please enter a few words seperated by a space: ");
+            string input = Console.ReadLine().ToLower();
+
+            if (String.IsNullOrWhiteSpace(input))
+            {
+                return;
+            }
+
+            var variable = "";
+            foreach (var word in input.Split(' '))
+            {
+                var pascal = char.ToUpper(word[0]) + word.Substring(1);
+                variable += pascal;
+            }
+            Console.WriteLine(variable);
+        }
     }
 }
