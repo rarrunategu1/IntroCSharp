@@ -154,25 +154,19 @@ namespace IntroCSharp
             }
         }
 
-        public static void reversedName()
+        public static string reversedName(string name)
         {
-            Console.WriteLine("reversedName Method: ");
-            Console.WriteLine("Please enter your name so that I can reverse it for you: ");
-            string userInput = Console.ReadLine();
+            
 
-            char [] userName = new char[userInput.Length];
+            char [] userName = new char[name.Length];
 
-            for (int i = 0; i < userInput.Length; i++)
+            for (int i = 0; i < name.Length; i++)
             {
-                userName[i] = userInput[i];
+                userName[i] = name[i];
             }
             
             Array.Reverse(userName);
-
-            foreach (char letter in userName)
-            {
-                Console.Write(letter);
-            }
+            return new string(userName);
         }
 
         public static void uniqueNumber()
@@ -277,8 +271,11 @@ namespace IntroCSharp
             //facebookLikes();
             //Console.WriteLine();
 
-            //reversedName();
-            //Console.WriteLine();
+            Console.WriteLine("reversedName Method: ");
+            Console.WriteLine("Please enter your name so that I can reverse it for you: ");
+            string userInput = Console.ReadLine();
+            string reverse = reversedName(userInput);
+            Console.WriteLine(reverse);
 
             //uniqueNumber();
             //Console.WriteLine();
@@ -301,7 +298,7 @@ namespace IntroCSharp
             //string summarize = text.summarizingText(sentence);
             //Console.WriteLine(summarize);
             //Console.WriteLine();
-            
+
             //WorkingWithText.stringBuilder();
             //Console.WriteLine();
 
@@ -314,8 +311,8 @@ namespace IntroCSharp
             //Exercises.timeValidity();
             //Console.WriteLine();
 
-            Exercises.pascalCase();
-            Console.WriteLine();
+            //Exercises.pascalCase();
+            //Console.WriteLine();
 
             Console.ReadLine();
             
